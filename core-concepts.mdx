@@ -1,0 +1,120 @@
+---
+title: Core Concepts
+description: Understanding the fundamental concepts behind Annu Gulati Documentation
+---
+
+## Projects and Organization
+
+At the heart of Annu Gulati Documentation are projects, which serve as containers for your documentation. Each project can represent a product, service, or team initiative.
+
+<Columns cols={3}>
+  <Card title="Project Structure" icon="folder" href="#" />
+  <Card title="Version Control" icon="git-branch" href="#" />
+  <Card title="Access Control" icon="shield" href="#" />
+</Columns>
+
+## Documentation Types
+
+Our platform supports various documentation formats to accommodate different needs and workflows.
+
+<Tabs>
+  <Tab title="API Docs" icon="code">
+    Technical documentation for APIs, including endpoints, parameters, and examples.
+
+    ```json
+    {
+      "endpoint": "/api/users",
+      "method": "GET",
+      "description": "Retrieve user list",
+      "response": {
+        "users": [
+          {"id": 1, "name": "John Doe"}
+        ]
+      }
+    }
+    ```
+  </Tab>
+  <Tab title="User Guides" icon="book-open">
+    Step-by-step instructions for end users and administrators.
+  </Tab>
+  <Tab title="Technical Specs" icon="file-text">
+    Detailed specifications for developers and system architects.
+  </Tab>
+</Tabs>
+
+<Callout kind="info">Use consistent naming conventions across all your documentation for better discoverability.</Callout>
+
+## Version Management
+
+Keep track of changes and maintain multiple versions of your documentation simultaneously.
+
+<Steps>
+  <Step title="Create Version" icon="plus">
+    Start a new version branch for major updates or releases.
+  </Step>
+  <Step title="Edit Content" icon="edit">
+    Make changes to your documentation in the version branch.
+  </Step>
+  <Step title="Review & Merge" icon="check-circle">
+    Review changes and merge them into the main branch.
+  </Step>
+</Steps>
+
+<ExpandableGroup>
+  <Expandable title="What are versions for?" default-open="false">
+    Versions allow you to maintain documentation for different product releases or maintain drafts separate from published content.
+  </Expandable>
+  <Expandable title="How do I switch versions?" default-open="false">
+    Use the version selector in the project dashboard to switch between different documentation versions.
+  </Expandable>
+</ExpandableGroup>
+
+<CodeGroup tabs="Git,Platform UI">
+  ```bash
+  # Using Git integration
+  git checkout -b v2.0-docs
+  # Make changes
+  git commit -m "Update API docs for v2.0"
+  git push origin v2.0-docs
+  ```
+  ```bash
+  # Platform version management
+  annu-docs version create v2.0
+  annu-docs version switch v2.0
+  annu-docs publish
+  ```
+</CodeGroup>
+
+## Search and Discovery
+
+Find information quickly with our powerful search capabilities and intelligent tagging system.
+
+<Columns cols={2}>
+  <Card title="Full-Text Search" icon="search" href="#" />
+  <Card title="Tag-Based Filtering" icon="tag" href="#" />
+</Columns>
+
+<Callout kind="tip">Use descriptive tags like `api`, `tutorial`, `troubleshooting` to make your content easier to find.</Callout>
+
+## Collaboration Features
+
+Work together seamlessly with built-in collaboration tools designed for technical teams.
+
+<Steps>
+  <Step title="Invite Collaborators" icon="users">
+    Add team members to your project with appropriate permissions.
+  </Step>
+  <Step title="Real-Time Editing" icon="zap">
+    Edit documents simultaneously with conflict resolution.
+  </Step>
+  <Step title="Review Process" icon="eye">
+    Submit changes for review before publishing.
+  </Step>
+</Steps>
+
+<Expandable title="Permission Levels" default-open="false">
+  - **Owner**: Full access to project settings and billing
+  - **Editor**: Can create and edit content
+  - **Reviewer**: Can review and approve changes
+  - **Viewer**: Read-only access to published content
+</Expandable>

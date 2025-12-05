@@ -1,0 +1,81 @@
+{
+  "name": "Annu Gulati Documentation",
+  "initialRoute": "introduction",
+  "colors": {
+    "light": {
+      "brand": "#3B82F6"
+    },
+    "dark": {
+      "brand": "#3B82F6"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "icon": "book",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "icon": "rocket",
+            "pages": [
+              {
+                "title": "Introduction",
+                "path": "introduction",
+                "icon": "star"
+              }
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "icon": "lightbulb",
+            "pages": [
+              {
+                "title": "Getting Started Guide",
+                "path": "getting-started",
+                "icon": "play"
+              },
+              {
+                "title": "Core Concepts",
+                "path": "core-concepts",
+                "icon": "settings"
+              }
+            ]
+          },
+          {
+            "group": "Advanced",
+            "icon": "zap",
+            "pages": [
+              {
+                "title": "Advanced Guides",
+                "path": "advanced-guides",
+                "icon": "tool"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "icon": "code",
+        "groups": [
+          {
+            "group": "Endpoints",
+            "openapi": "openapi.yaml"
+          }
+        ]
+      },
+      {
+        "tab": "Changelog",
+        "icon": "clock",
+        "pages": [
+          {
+            "title": "Release History",
+            "path": "changelog",
+            "icon": "history"
+          }
+        ]
+      }
+    ]
+  }
+}

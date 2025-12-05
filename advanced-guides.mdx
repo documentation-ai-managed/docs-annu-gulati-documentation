@@ -1,0 +1,142 @@
+---
+title: Advanced Guides
+description: In-depth guides for power users and advanced configuration options
+---
+
+## Custom Integrations
+
+Extend Annu Gulati Documentation with custom integrations and webhooks for automated workflows.
+
+<Steps>
+  <Step title="Set Up Webhooks" icon="webhook">
+    Configure webhook endpoints to receive notifications about documentation changes.
+  </Step>
+  <Step title="API Integration" icon="plug">
+    Use our REST API to programmatically manage documentation.
+  </Step>
+  <Step title="Custom Plugins" icon="puzzle">
+    Develop custom plugins to extend platform functionality.
+  </Step>
+</Steps>
+
+<Tabs>
+  <Tab title="Webhook Configuration" icon="settings">
+    Set up webhooks to trigger actions when documentation is updated.
+
+    ```json
+    {
+      "url": "https://example.com/webhook",
+      "events": ["document.updated", "project.published"],
+      "secret": "your-webhook-secret"
+    }
+    ```
+  </Tab>
+  <Tab title="API Usage" icon="code">
+    Integrate with external systems using our comprehensive API.
+  </Tab>
+  <Tab title="Plugin Development" icon="tool">
+    Build custom plugins to add new features to the platform.
+  </Tab>
+</Tabs>
+
+<Callout kind="alert">Always use HTTPS URLs for webhooks and keep secrets secure.</Callout>
+
+## Performance Optimization
+
+Optimize your documentation for faster loading and better user experience.
+
+<Columns cols={3}>
+  <Card title="Image Optimization" icon="image" href="#" />
+  <Card title="Caching Strategies" icon="database" href="#" />
+  <Card title="CDN Integration" icon="globe" href="#" />
+</Columns>
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  // Optimize images programmatically
+  const optimizedImage = await annuDocs.optimizeImage({
+    source: 'large-image.png',
+    quality: 80,
+    format: 'webp'
+  });
+  ```
+  ```python
+  from annu_gulati_docs import ImageOptimizer
+
+  optimizer = ImageOptimizer()
+  optimized = optimizer.optimize(
+      source='large-image.png',
+      quality=80,
+      format='webp'
+  )
+  ```
+</CodeGroup>
+
+<ExpandableGroup>
+  <Expandable title="Image Formats" default-open="false">
+    Supported formats: JPEG, PNG, WebP, SVG. Use WebP for better compression.
+  </Expandable>
+  <Expandable title="Caching Best Practices" default-open="false">
+    Set appropriate cache headers and use CDN for global distribution.
+  </Expandable>
+</ExpandableGroup>
+
+## Security and Compliance
+
+Implement security measures and ensure compliance with industry standards.
+
+<Steps>
+  <Step title="Access Control" icon="shield">
+    Configure role-based access control for your projects.
+  </Step>
+  <Step title="Audit Logging" icon="file-text">
+    Enable audit logs to track all documentation changes.
+  </Step>
+  <Step title="Encryption" icon="lock">
+    Ensure data encryption at rest and in transit.
+  </Step>
+</Steps>
+
+<Callout kind="danger">Regularly review access permissions and rotate API keys to maintain security.</Callout>
+
+## Migration and Import
+
+Move existing documentation to Annu Gulati Documentation with our migration tools.
+
+<Tabs>
+  <Tab title="From Confluence" icon="file-text">
+    Import pages from Confluence with formatting preserved.
+  </Tab>
+  <Tab title="From GitHub Wiki" icon="github">
+    Pull documentation from GitHub wikis automatically.
+  </Tab>
+  <Tab title="Custom Import" icon="upload">
+    Use our API for custom migration scripts.
+  </Tab>
+</Tabs>
+
+<CodeGroup tabs="Shell,Python">
+  ```bash
+  # Bulk import from directory
+  annu-docs import --source ./docs --format markdown
+  ```
+  ```python
+  import annu_gulati_docs as docs
+
+  # Custom migration
+  client = docs.Client()
+  client.import_documents(
+      source_path='./legacy-docs',
+      format='markdown',
+      preserve_structure=True
+  )
+  ```
+</CodeGroup>
+
+<Expandable title="Migration Checklist" default-open="false">
+  - Backup existing documentation
+  - Test import process with sample data
+  - Verify formatting and links
+  - Update internal references
+  - Train team on new platform
+</Expandable>

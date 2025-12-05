@@ -1,0 +1,101 @@
+---
+title: Getting Started
+description: Step-by-step guide to setting up your first Annu Gulati Documentation project
+---
+
+## Quick Setup
+
+Get up and running with Annu Gulati Documentation in just a few minutes. Follow these steps to create your first project and start documenting.
+
+<Steps>
+  <Step title="Sign Up" icon="user">
+    Visit the platform and create your account. Use your professional email for team collaboration features.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your email for a verification link and confirm your account.
+  </Step>
+  <Step title="Create Project" icon="folder">
+    Click "New Project" and give it a descriptive name like "API Documentation" or "User Guides".
+  </Step>
+  <Step title="Configure Settings" icon="settings">
+    Set up project permissions, choose your theme, and configure basic settings.
+  </Step>
+</Steps>
+
+## Project Configuration
+
+Once your project is created, customize it to match your team's workflow and branding needs.
+
+<Tabs>
+  <Tab title="Basic Settings" icon="settings">
+    Configure your project's name, description, and visibility settings. Choose whether to make it public or private.
+  </Tab>
+  <Tab title="Team Access" icon="users">
+    Invite team members and assign roles. Set up read/write permissions for different user groups.
+  </Tab>
+  <Tab title="Integrations" icon="plug">
+    Connect with external tools like GitHub, Slack, or your CI/CD pipeline for automated documentation updates.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">Enable auto-save to prevent losing work during editing sessions.</Callout>
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  // Example API integration
+  const docClient = new AnnuGulatiDocs({
+    apiKey: 'your-api-key',
+    projectId: 'project-123'
+  });
+
+  await docClient.createDocument({
+    title: 'API Reference',
+    content: '# API Documentation\n\nThis is the API docs...',
+    tags: ['api', 'reference']
+  });
+  ```
+  ```python
+  from annu_gulati_docs import Client
+
+  client = Client(api_key='your-api-key', project_id='project-123')
+  client.create_document(
+      title='API Reference',
+      content='# API Documentation\n\nThis is the API docs...',
+      tags=['api', 'reference']
+  )
+  ```
+</CodeGroup>
+
+## Content Creation
+
+Start adding content to your project using our intuitive editor. Support for Markdown and MDX makes it easy to create rich documentation.
+
+<Columns cols={2}>
+  <Card title="Markdown Basics" icon="file-text" href="#" />
+  <Card title="MDX Components" icon="code" href="#" />
+</Columns>
+
+<Expandable title="Supported File Types" default-open="false">
+  - Markdown (.md)
+  - MDX (.mdx)
+  - Plain text (.txt)
+  - JSON configuration files
+</Expandable>
+
+## Publishing Your Docs
+
+When your content is ready, publish it for your team to access. Choose between draft and published states for controlled releases.
+
+<Steps>
+  <Step title="Review Content" icon="eye">
+    Preview your documentation to ensure formatting and links work correctly.
+  </Step>
+  <Step title="Set Permissions" icon="lock">
+    Configure who can view and edit your published documentation.
+  </Step>
+  <Step title="Publish" icon="send">
+    Click publish to make your documentation live.
+  </Step>
+</Steps>
+
+<Callout kind="alert">Always test links and images before publishing to avoid broken references.</Callout>
